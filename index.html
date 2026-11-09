@@ -4,35 +4,160 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HoloH Förlag</title>
-  <meta name="description" content="HoloH Förlag">
+  <meta name="description" content="HoloH Förlag – böcker som går att köpa direkt i vår webbutik.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f1d1a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23f1ede6'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #faf8f4;
       --fg: #1f1d1a;
+      --muted: #6b655c;
+      --line: #ddd6ca;
+      --accent: #7a3b2e;
+      --accent-fg: #ffffff;
     }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #1a1917; --fg: #f1ede6; }
-    }
-    html, body { height: 100%; margin: 0; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
+      margin: 0;
       background: var(--bg);
       color: var(--fg);
+      font-family: "Inter", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+    header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--fg);
+      text-decoration: none;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover { color: var(--fg); }
+
+    .hero {
+      text-align: center;
+      padding: clamp(64px, 14vw, 140px) 0 clamp(56px, 10vw, 100px);
+    }
+    .ornament {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Georgia, "Times New Roman", serif;
-      padding: 0 16px;
+      gap: 14px;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .ornament::before, .ornament::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: currentColor;
     }
     h1 {
-      font-weight: normal;
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      letter-spacing: 0.02em;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(3rem, 10vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      margin: 0 0 16px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 0 0 40px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--accent-fg);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 14px 32px;
+      border-radius: 999px;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .btn:hover { opacity: .9; transform: translateY(-1px); }
+
+    .shop {
+      border-top: 1px solid var(--line);
+      padding: 72px 0;
+      scroll-margin-top: 16px;
+    }
+    h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2rem, 5vw, 2.75rem);
       text-align: center;
-      margin: 0;
+      margin: 0 0 8px;
+    }
+    .shop .lead {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 0 40px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>HoloH Förlag</h1>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="/">HoloH</a>
+      <nav><a href="#bocker">Böcker</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="ornament">✦</div>
+        <h1>HoloH Förlag</h1>
+        <p class="tagline">Böcker att läsa, äga och återvända till.</p>
+        <a class="btn" href="#bocker">Köp boken</a>
+      </div>
+    </section>
+
+    <section class="shop" id="bocker">
+      <div class="wrap">
+        <h2>Våra böcker</h2>
+        <p class="lead">Beställ direkt i vår webbutik.</p>
+        <script async loading="lazy" src="https://webshop.publit.com/publit-webshop-1.0.js">
+          {
+              "id": "5318",
+              "sortBy": "available_date:desc"
+          }
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> HoloH Förlag</div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
