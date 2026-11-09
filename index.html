@@ -96,6 +96,34 @@
     }
     .btn:hover { opacity: .9; transform: translateY(-1px); }
 
+    .about {
+      border-top: 1px solid var(--line);
+      padding: 72px 0;
+    }
+    .about .text {
+      max-width: 640px;
+      margin: 0 auto;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.3rem;
+      line-height: 1.65;
+    }
+    .about .text p { margin: 0 0 1.2em; }
+    .about .text p:first-child::first-letter {
+      float: left;
+      font-size: 3.6em;
+      line-height: 0.85;
+      padding: 0.06em 0.1em 0 0;
+      color: var(--accent);
+    }
+    .about .meta {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 32px;
+    }
+
     .shop {
       border-top: 1px solid var(--line);
       padding: 72px 0;
@@ -127,7 +155,7 @@
   <header>
     <div class="wrap">
       <a class="brand" href="/">HoloH</a>
-      <nav><a href="#bocker">Böcker</a></nav>
+      <nav><a href="#om-boken">Om boken</a> &nbsp;·&nbsp; <a href="#bocker">Köp</a></nav>
     </div>
   </header>
 
@@ -138,6 +166,17 @@
         <h1>HoloH Förlag</h1>
         <p class="tagline">Böcker att läsa, äga och återvända till.</p>
         <a class="btn" href="#bocker">Köp boken</a>
+      </div>
+    </section>
+
+    <section class="about" id="om-boken">
+      <div class="wrap">
+        <h2>Om boken</h2>
+        <p class="meta">Utgiven 2024</p>
+        <div class="text">
+          <p>I mitten av 1950-talet föddes Kristina på djungelsjukhuset i Zorzor i det inre av Liberia. I byn Voinjama växte hon upp som missionärsbarn med sina föräldrar och syskon och i tidiga tonåren flyttade familjen vidare till Etiopien. Under sin uppväxt i Afrika träffar hon bland annat Liberias president Tubman och går på gudstjänst med Etiopiens kejsare Haile Selassie. Hon träffar människor i vardagen och delar deras glädje och sorg. I denna bok berättar Kristina om ett Afrika hon älskar och vars landskap och natur är underskönt och magiskt, rikt av underliga vackra blommor och växter, men också fullt av olika djur och farliga insekter. Hon berättar om tidigare missionärers slit med att bygga hus av lera, om deras barns bortgång i tropiska sjukdomar och umbäranden men också om de stora namnen som är förknippade med Afrika; om Livingstone och Speke, Ryszard Kapuściński och Graham Green.</p>
+          <p>Kristina blev så småningom barnläkare i Sverige och närde en dröm om att återvända till sitt Afrika. Hon återvände också några gånger i vuxen ålder men blev allvarligt sjuk och var under lång tid oförmögen att göra annat än att låta tanken vandra och på så sätt befrias från det fängelse som hennes sjukdom utgjorde. Hon gick tragiskt bort 2013. Hon lämnade efter sig detta manuskript.</p>
+        </div>
       </div>
     </section>
 
