@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HoloH Förlag</title>
-  <meta name="description" content="HoloH Förlag – böcker som går att köpa direkt i vår webbutik.">
+  <meta name="description" content="HoloH Förlag – utgivare av Stjärnhimmel över Café Kokeb (2024). Köp böckerna direkt i vår webbutik.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f1d1a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' text-anchor='middle' fill='%23f1ede6'%3EH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,33 +96,51 @@
     }
     .btn:hover { opacity: .9; transform: translateY(-1px); }
 
-    .about {
+    .books {
       border-top: 1px solid var(--line);
       padding: 72px 0;
+      scroll-margin-top: 16px;
     }
-    .about .text {
-      max-width: 640px;
+    .books > .wrap > h2 { margin-bottom: 48px; }
+    .book {
+      max-width: 680px;
       margin: 0 auto;
+      padding: 40px clamp(20px, 5vw, 48px);
+      background: #fffdf9;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+    .book + .book { margin-top: 40px; }
+    .book h3 {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.3rem;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      line-height: 1.15;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+    .book .meta {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 0 0 28px;
+    }
+    .book .text {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.25rem;
       line-height: 1.65;
     }
-    .about .text p { margin: 0 0 1.2em; }
-    .about .text p:first-child::first-letter {
+    .book .text p { margin: 0 0 1.1em; }
+    .book .text p:first-child::first-letter {
       float: left;
       font-size: 3.6em;
       line-height: 0.85;
       padding: 0.06em 0.1em 0 0;
       color: var(--accent);
     }
-    .about .meta {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin: 0 0 32px;
-    }
+    .book .actions { text-align: center; margin-top: 28px; }
 
     .shop {
       border-top: 1px solid var(--line);
@@ -155,7 +173,7 @@
   <header>
     <div class="wrap">
       <a class="brand" href="/">HoloH</a>
-      <nav><a href="#om-boken">Om boken</a> &nbsp;·&nbsp; <a href="#bocker">Köp</a></nav>
+      <nav><a href="#bocker">Böcker</a> &nbsp;·&nbsp; <a href="#webbutik">Webbutik</a></nav>
     </div>
   </header>
 
@@ -165,25 +183,30 @@
         <div class="ornament">✦</div>
         <h1>HoloH Förlag</h1>
         <p class="tagline">Böcker att läsa, äga och återvända till.</p>
-        <a class="btn" href="#bocker">Köp boken</a>
+        <a class="btn" href="#bocker">Se våra böcker</a>
       </div>
     </section>
 
-    <section class="about" id="om-boken">
-      <div class="wrap">
-        <h2>Om boken</h2>
-        <p class="meta">Utgiven 2024</p>
-        <div class="text">
-          <p>I mitten av 1950-talet föddes Kristina på djungelsjukhuset i Zorzor i det inre av Liberia. I byn Voinjama växte hon upp som missionärsbarn med sina föräldrar och syskon och i tidiga tonåren flyttade familjen vidare till Etiopien. Under sin uppväxt i Afrika träffar hon bland annat Liberias president Tubman och går på gudstjänst med Etiopiens kejsare Haile Selassie. Hon träffar människor i vardagen och delar deras glädje och sorg. I denna bok berättar Kristina om ett Afrika hon älskar och vars landskap och natur är underskönt och magiskt, rikt av underliga vackra blommor och växter, men också fullt av olika djur och farliga insekter. Hon berättar om tidigare missionärers slit med att bygga hus av lera, om deras barns bortgång i tropiska sjukdomar och umbäranden men också om de stora namnen som är förknippade med Afrika; om Livingstone och Speke, Ryszard Kapuściński och Graham Green.</p>
-          <p>Kristina blev så småningom barnläkare i Sverige och närde en dröm om att återvända till sitt Afrika. Hon återvände också några gånger i vuxen ålder men blev allvarligt sjuk och var under lång tid oförmögen att göra annat än att låta tanken vandra och på så sätt befrias från det fängelse som hennes sjukdom utgjorde. Hon gick tragiskt bort 2013. Hon lämnade efter sig detta manuskript.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="shop" id="bocker">
+    <section class="books" id="bocker">
       <div class="wrap">
         <h2>Våra böcker</h2>
-        <p class="lead">Beställ direkt i vår webbutik.</p>
+
+        <article class="book" id="stjarnhimmel-over-cafe-kokeb">
+          <h3>Stjärnhimmel över Café Kokeb</h3>
+          <p class="meta">Utgiven 2024</p>
+          <div class="text">
+          <p>I mitten av 1950-talet föddes Kristina på djungelsjukhuset i Zorzor i det inre av Liberia. I byn Voinjama växte hon upp som missionärsbarn med sina föräldrar och syskon och i tidiga tonåren flyttade familjen vidare till Etiopien. Under sin uppväxt i Afrika träffar hon bland annat Liberias president Tubman och går på gudstjänst med Etiopiens kejsare Haile Selassie. Hon träffar människor i vardagen och delar deras glädje och sorg. I denna bok berättar Kristina om ett Afrika hon älskar och vars landskap och natur är underskönt och magiskt, rikt av underliga vackra blommor och växter, men också fullt av olika djur och farliga insekter. Hon berättar om tidigare missionärers slit med att bygga hus av lera, om deras barns bortgång i tropiska sjukdomar och umbäranden men också om de stora namnen som är förknippade med Afrika; om Livingstone och Speke, Ryszard Kapuściński och Graham Greene.</p>
+          <p>Kristina blev så småningom barnläkare i Sverige och närde en dröm om att återvända till sitt Afrika. Hon återvände också några gånger i vuxen ålder men blev allvarligt sjuk och var under lång tid oförmögen att göra annat än att låta tanken vandra och på så sätt befrias från det fängelse som hennes sjukdom utgjorde. Hon gick tragiskt bort 2013. Hon lämnade efter sig detta manuskript.</p>
+          </div>
+          <div class="actions"><a class="btn" href="#webbutik">Köp boken</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="shop" id="webbutik">
+      <div class="wrap">
+        <h2>Webbutik</h2>
+        <p class="lead">Beställ våra böcker direkt här.</p>
         <script async loading="lazy" src="https://webshop.publit.com/publit-webshop-1.0.js">
           {
               "id": "5318",
